@@ -6,7 +6,7 @@ This application demonstrates:
 
 * How to programmatically define instances of all the entities in the RadGrad data model provided by the radgrad:core package, as well as the relationships between them.
 
-* How to manipulate RadGrad data by a client. This is demonstrated by simply displaying data in tables.  Note that the amount of data displayed for each entity depends upon the role of the logged in user. Currently, the entire data model is published to users with the role 'admin' or 'faculty'.  For a student, only their own data is published to the client for the following entities: users, degree program, course instances, opportunity instances, and work instances.
+* How to manipulate RadGrad data by a client. This is demonstrated by displaying the data model through a series of tables. Note that the specific data published and displayed for each entity depends upon the role of the logged in user. Currently, the entire data model is published to users with the role 'admin' or 'faculty'.  For a student, only their own data is published to the client for the following entities: users, degree program, course instances, opportunity instances, and work instances.
 
 ## Invocation
 
