@@ -93,8 +93,60 @@ Implementation links:
   
 ### Tags and Tag Types
 
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-tags-tag-types.png)
+
+In addition to specifying Degree Goals, a user can specify one or more RadGrad Tags, which define interest areas.  Since "interests" can span so many different types of things, RadGrad provides a "TagType" entity in order to organize Tags into related groups. The sample data set defines four kinds of Tags: CS Disciplines, Non-CS Disciplines, Locations, and Professional Goals. The real RadGrad data model will likely have many more 
+ 
+The data model defines a single instance of a Tag for each TagType. 
+
+Implementation links:
+
+  * [Tag Template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L73-L93)
+  * [Tag helper function](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.js#L138-L149)
+  * [Tag Type Template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L53-L71)
+  * [Tag type helper function](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.js#L151-L161)
+  
+## Course, Course instances
+
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-course-instances.png)
+
+RadGrad provides the Course and Course Instance entities to enable the system to explicitly represent and reason about the ICS courses taken by students.  
+
+The Course entity provides information about courses in general, while the Course Instance entity represents that a specific user took a specific course in a specific semester. 
+
+Note that a user is free to indicate course instances for semesters into the future, and even indicate the grade they hope to obtain for that course.  However, the "verified" flag is used to tell the system that the data has been independently verified as accurate. In practice, RadGrad will create historical course instance data by importing records from STAR through an administrator interface, which will help guarantee that historical course data is accurate. 
+
+(From now on, you are expected to be able to find the implementation links for template and helper functions yourself.)
+  
+### Opportunity, Opportunity Type, Opportunity Instances
+
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-opportunities-types-instances.png)
+
+An important aspect of RadGrad is its ability to represent not just curricular activities (courses) but also extracurricular activities (which are called "Opportunities" in RadGrad). 
+
+Like tags, opportunities have an associated "OpportunityType" which allows them to be organized into categories. 
+ 
+Unlike tags, RadGrad provides an "OpportunityInstance", which is an entity that indicates that an opportunity was taken advantage of in a specific semester by a specific student, and (potentially) how many hours per week on average were required to take advantage of that opportunity. Finally, the "instance" must be verified by a faculty or admin user, in order to prevent students from "gaming the system" by indicating opportunities they did not truly engage with.
+
+### Work instances
+
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-work-instances.png)
+
+The final "instance" in RadGrad is the Work Instance, which represents for a specific student and a specific semester, the number of hours they worked at an outside job on average each week of the semester.
+
+Unlike Course Instances and Opportunity Instances, there is no practical way to verify Work Instance data, so it is up to the student to report that information accurately.
+
+### Slugs
+
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-slugs.png)
+
+The last RadGrad entity represented in this system is the Slug.  Slugs are simply strings that form a human-understandable, unique ID for referring to an entity.  (Not all entities have Slugs: none of the "instances" have them.)
+ 
+ 
 
 
+  
+  
 
 
 
