@@ -16,7 +16,7 @@ Next, download the repository, cd to the app/ directory, and invoke `meteor`.  I
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data-model-home-page.png?token=AARt8EPSG6BJ5ELPKVBSD5yDysfgh239ks5WmvfRwA%3D%3D)
 
-You'll now need to login. Since this is sample data, you can find user definitions and credentials in [app/server/sample-data-model/definitions/Users.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/Users.js). Upon login, the home page will display whatever aspects of the RadGrad data model are accessible to this user. Here is a portion of the home page for one user:
+You'll now need to login. Since this is sample data, you can find user definitions and credentials in [app/server/sample-data-model/definitions/Users.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/Users.js). Upon login, the home page will display whatever aspects of the RadGrad data model are accessible to this user. Here is a portion of the home page for the user "Philip Johnson". (*Note:* for exemplary purposes, user names refer to actual faculty and graduate students in the ICS department, and their email addresses are correct, but otherwise all of the data is made up.)
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png?token=AARt8D2l8jaqrC2EKIZT9vHpGVtGYLnZks5WmvuOwA%3D%3D)
 
@@ -66,7 +66,7 @@ RadGrad users come in three roles: admin, faculty, and student. Currently, there
 
 
 
-The [User template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L4-16) is pretty trivial, although it is interesting as an illustration of how simple it is in Meteor to render markdown.  You can see that one of the students has [a link represented in Markdown in their profile](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/StudentProfile.js#L43), which is converted to HTML in the interface. 
+The [User template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L4-L16) is pretty trivial, although it is interesting as an illustration of how simple it is in Meteor to render markdown.  You can see that one of the students has [a link represented in Markdown in their profile](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/StudentProfile.js#L43), which is converted to HTML in the interface. 
 
 The [definition of a student](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/StudentProfile.js) also provides several illustrations of how entities and relationships between them are defined in RadGrad. 
 
