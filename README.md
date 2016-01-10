@@ -14,7 +14,7 @@ To run this application, first [install Meteor](https://www.meteor.com/install).
 
 Next, download the repository, cd to the app/ directory, and invoke `meteor`.  If everything goes correctly, then retrieve [http://localhost:3000](http://localhost:3000) in a browser to see the following page:
 
-
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data-model-home-page.png?token=AARt8EPSG6BJ5ELPKVBSD5yDysfgh239ks5WmvfRwA%3D%3D)
 
 # Loading sample data
 
