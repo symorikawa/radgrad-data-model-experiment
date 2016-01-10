@@ -64,7 +64,7 @@ The user interface for data-model-example is extremely simple. Upon login, the h
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png)
 
-RadGrad users come in three roles: admin, faculty, and student. Currently, there is no distinction between the admin and faculty roles, and the system publishes the entire data model to those users.  For users, however, the system restricts the publications so that a user can not see details about any other user's degree program (i.e. their instances of courses, opportunities, and work), or their degree plan.
+RadGrad users come in three roles: admin, faculty, and student. Currently, there is no distinction between the admin and faculty roles, and the system publishes the entire data model to those users.  For students, however, the system publishes only a subset of the data so that a user can not see details about any other student's degree program data (i.e. their degree plan, work instances, course instances, opportunity instances, recommendations, or predictions).
 
 
 
