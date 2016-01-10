@@ -8,7 +8,7 @@ This application demonstrates:
 
 * How to manipulate RadGrad data by a client. This is demonstrated by simply displaying data in tables.  Note that the amount of data displayed for each entity depends upon the role of the logged in user. Currently, the entire data model is published to users with the role 'admin' or 'faculty'.  For a student, only their own data is published to the client for the following entities: users, degree program, course instances, opportunity instances, and work instances.
 
-# Invocation
+## Invocation
 
 To run this application, first [install Meteor](https://www.meteor.com/install).
 
@@ -22,7 +22,7 @@ You'll now need to login. Since this is sample data, you can find user definitio
 
 By studying how the RadGrad data model is displayed to these tables, you will hopefully gain insight into how to manipulate the data model. 
 
-# Loading the sample data set
+## Loading the sample data set
 
 Upon startup, a sample data set is loaded. This data set is defined by the files in the [app/server/sample-data-model/definitions](https://github.com/radgrad/data-model-example/tree/master/app/server/sample-data-model/definitions) directory. Each of these files defines a function, which, when invoked, actually defines the data. The invocation of these data-defining functions occurs in [app/server/sample-data-model/LoadDataModel.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/LoadDataModel.js), which looks like this:
 
@@ -54,6 +54,6 @@ Several things to note:
 
 3. To support testing, the system implements a deleteAll() method which should delete all entities, as well as a verifyEmptyDataModel() method to check that no RadGrad entity instances exist.
 
-# User interface
+## User interface
 
 The user interface for data-model-example is extremely simple. Upon login, the home page displays all of the published data associated with all of the entities in the RadGrad data model as implemented by radgrad:core.  The following sections show what is output 
