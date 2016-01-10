@@ -22,7 +22,7 @@ You'll now need to login. Since this is sample data, you can find user definitio
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png)
 
-By studying how the RadGrad data model is displayed to these tables, you will hopefully gain insight into how to manipulate the data model. 
+By studying how the RadGrad data model is manipulated in this application, you will hopefully gain insight into how to manipulate the data model for your own purposes.  
 
 ## Loading the sample data set
 
