@@ -16,7 +16,9 @@ Next, download the repository, cd to the app/ directory, and invoke `meteor`.  I
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data-model-home-page.png)
 
-You'll now need to login. Since this is sample data, you can find user definitions and credentials in [app/server/sample-data-model/definitions/Users.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/Users.js). Upon login, the home page will display whatever aspects of the RadGrad data model are accessible to this user. Here is a portion of the home page for the user "Philip Johnson". (*Note:* for exemplary purposes, user names refer to actual faculty and graduate students in the ICS department, and their email addresses are correct, but otherwise all of the data is made up.)
+You'll now need to login. Since this is sample data, you can find user definitions and credentials in [app/server/sample-data-model/definitions/Users.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/Users.js). Upon login, the home page will display whatever aspects of the RadGrad data model are accessible to this user. Here is a portion of the home page for the user "Philip Johnson". 
+
+*Note: for exemplary purposes, user names refer to actual faculty and graduate students in the ICS department, and their email addresses are correct, but otherwise all of the data for these users are made up.*
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png)
 
