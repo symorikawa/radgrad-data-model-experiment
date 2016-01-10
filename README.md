@@ -110,6 +110,8 @@ Implementation links:
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-course-instances.png)
 
+*Note: Course Instance data is made up.*
+
 RadGrad provides the Course and Course Instance entities to enable the system to explicitly represent and reason about the ICS courses taken by students.  
 
 The Course entity provides information about courses in general, while the Course Instance entity represents that a specific user took a specific course in a specific semester. 
@@ -122,6 +124,8 @@ Note that a user is free to indicate course instances for semesters into the fut
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-opportunities-types-instances.png)
 
+*Note: Opportunity Instance data is made up.*
+
 An important aspect of RadGrad is its ability to represent not just curricular activities (courses) but also extracurricular activities (which are called "Opportunities" in RadGrad). 
 
 Like tags, opportunities have an associated "OpportunityType" which allows them to be organized into categories. 
@@ -132,6 +136,8 @@ Unlike tags, RadGrad provides an "OpportunityInstance", which is an entity that 
 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-work-instances.png)
 
+*Note: Work Instance data is made up.*
+
 The final "instance" in RadGrad is the Work Instance, which represents for a specific student and a specific semester, the number of hours they worked at an outside job on average each week of the semester.
 
 Unlike Course Instances and Opportunity Instances, there is no practical way to verify Work Instance data, so it is up to the student to report that information accurately.
@@ -141,6 +147,26 @@ Unlike Course Instances and Opportunity Instances, there is no practical way to 
 ![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-slugs.png)
 
 The last RadGrad entity represented in this system is the Slug.  Slugs are simply strings that form a human-understandable, unique ID for referring to an entity.  (Not all entities have Slugs: none of the "instances" have them.)
+
+Slugs are convenient when defining entities. For example, consider this definition of a Tag:
+
+```js
+RadGrad.tag.define({name: "Software Engineering",
+                    slug: "software-engineering",
+                    description: "TBD",
+                    tagType: "cs-disciplines"
+                    });
+```
+
+The RadGrad.tag.define function allows you to pass the tagType using its Slug, even though the underlying collection stores the actual ID of the underlying TagType document. Passing the TagType's document ID explicitly would require a little more effort.  
+
+There is another reason for slugs: we anticipate that the ultimate RadGrad user interface will want to have pages dedicated to various entities. For example, it is likely to be useful to have a page dedicated to the "Software Engineering" tag, which will provide its definition, the tag type it is part of, and indications of users, opportunities, and courses associated with it.  The slug will simplify the creation of a user-friendly URL, such as:
+
+    http://radgrad.ics.hawaii.edu/tag/software-engineering
+    
+
+
+
  
  
 
