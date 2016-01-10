@@ -14,11 +14,11 @@ To run this application, first [install Meteor](https://www.meteor.com/install).
 
 Next, download the repository, cd to the app/ directory, and invoke `meteor`.  If everything goes correctly, then [http://localhost:3000](http://localhost:3000) will display the following:
 
-![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data-model-home-page.png?token=AARt8EPSG6BJ5ELPKVBSD5yDysfgh239ks5WmvfRwA%3D%3D)
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data-model-home-page.png)
 
 You'll now need to login. Since this is sample data, you can find user definitions and credentials in [app/server/sample-data-model/definitions/Users.js](https://github.com/radgrad/data-model-example/blob/master/app/server/sample-data-model/definitions/Users.js). Upon login, the home page will display whatever aspects of the RadGrad data model are accessible to this user. Here is a portion of the home page for the user "Philip Johnson". (*Note:* for exemplary purposes, user names refer to actual faculty and graduate students in the ICS department, and their email addresses are correct, but otherwise all of the data is made up.)
 
-![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png?token=AARt8D2l8jaqrC2EKIZT9vHpGVtGYLnZks5WmvuOwA%3D%3D)
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png)
 
 By studying how the RadGrad data model is displayed to these tables, you will hopefully gain insight into how to manipulate the data model. 
 
@@ -60,7 +60,7 @@ The user interface for data-model-example is extremely simple. Upon login, the h
 
 ### Users
 
-![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png?token=AARt8D2l8jaqrC2EKIZT9vHpGVtGYLnZks5WmvuOwA%3D%3D)
+![](https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/sample-data/sample-data-users.png)
 
 RadGrad users come in three roles: admin, faculty, and student. Currently, there is no distinction between the admin and faculty roles, and the system publishes the entire data model to those users.  For users, however, the system restricts the publications so that a user can not see details about any other user's degree program (i.e. their instances of courses, opportunities, and work), or their degree plan.
 
@@ -83,6 +83,17 @@ The definition of the User entity is found in the [RadGrad:core package, User.js
 All students have either zero or one Degree Plan entities, which represents all of the courses they have taken (their course instances), the opportunities they have taken advantage of (opportunity instances), and their outside work (work instances). You can see that this screen image shows the degree plan for the hypothetical user Anthony Christe.  In this sample data set, there is only one defined degree plan instance. (The other student in the sample data set, "Sergey Negrashov", does not yet have a degree plan instance.) If you logged in as Sergey Negrashov, you would not be able to see the Degree Plan instance associated with Anthony Christe.
 
 All students can also associate themselves with one or more Degree Goals, which (when fully implemented) will enable the system to analyze a student's degree plan and make recommendations based upon their chosen Degree Goals. Currently, this recommendation mechanism is not implemented.
+
+Implementation links:
+
+  * [Degree Plans Template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L20-L31) 
+  * [Degree Plans Helper Function](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.js#L64-L84).
+  * [Degree Goals Template](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.html#L33-L51)
+  * [Degree Goals Helper Function](https://github.com/radgrad/data-model-example/blob/master/app/client/templates/home/ListData.js#L55-L62)
+  
+### Tags and Tag Types
+
+
 
 
 
