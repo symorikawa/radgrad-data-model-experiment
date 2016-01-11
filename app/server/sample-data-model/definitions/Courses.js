@@ -8,6 +8,13 @@ defineCourses = function() {
       tags: ["software-engineering"]
     },
     {
+      name: "nonICS 100-level course",
+      slug: "nonICS-1xx",
+      number: "nonICS 1xx",
+      description: "Any non ICS course at the 100 level.",
+      tags: []
+    },
+    {
       name: "Algorithms",
       slug: "ics311",
       number: "ICS 311",

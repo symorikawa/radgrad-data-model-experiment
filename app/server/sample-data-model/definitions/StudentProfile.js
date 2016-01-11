@@ -10,7 +10,7 @@ defineStudentProfile = function() {
 
   let sampleCourseInstanceData = [
     {semesterID: RadGrad.semester.get("Fall", 2015), course: "ics311", verified: false, grade: "B", studentID: acID},
-    {semesterID: RadGrad.semester.get("Fall", 2014), course: "ics311", verified: false, grade: "B", studentID: acID},
+    {semesterID: RadGrad.semester.get("Fall", 2014), course: "nonICS-1xx", verified: false, grade: "B", studentID: acID, note: "Art 132"},
     {semesterID: RadGrad.semester.get("Spring", 2016), course: "ics212", verified: true, grade: "A", studentID: acID}
   ];
 

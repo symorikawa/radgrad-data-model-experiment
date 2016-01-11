@@ -6,7 +6,9 @@ defineOpportunities = function() {
       description: "Da best",
       opportunityType: "event",
       sponsor: "philipjohnson",
-      tags: ["software-engineering"]
+      tags: ["software-engineering"],
+      startActive: moment("2015-01-12").toDate(),
+      endActive: moment("2015-02-12").toDate()
     },
     {
       name: "ACM Manoa Membership",
@@ -14,7 +16,9 @@ defineOpportunities = function() {
       description: "ACM Student Chapter",
       opportunityType: "club",
       sponsor: "henricasanova",
-      tags: ["software-engineering", "silicon-valley"]
+      tags: ["software-engineering", "silicon-valley"],
+      startActive: moment("2015-01-12").toDate(),
+      endActive: moment("2016-02-12").toDate()
     }
   ];
 

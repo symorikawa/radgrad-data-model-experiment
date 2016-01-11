@@ -48,7 +48,8 @@ Template.ListData.helpers({
       let verified = `${courseInstance.verified}`;
       let grade = `${courseInstance.grade}`;
       let student = `${RadGrad.user.findOne(courseInstance.studentID).lastName}`;
-      return {semester: semester, course: course, verified: verified, grade: grade, student: student}
+      let note = courseInstance.note;
+      return {semester: semester, course: course, verified: verified, grade: grade, student: student, note: note}
     })
   },
 
@@ -95,9 +96,12 @@ Template.ListData.helpers({
       let sponsor = `*Sponsor:* ${RadGrad.user.findOne(opportunity.sponsorID).lastName}`;
       let tags = `<br>*Tags:* ${RadGrad.tag.getTagNames(opportunity.tagIDs)}`;
       let description = `<br>*Description:* ${opportunity.description}`;
+      let start = moment(opportunity.startActive).format('MM/DD/YYYY');
+      let end = moment(opportunity.endActive).format('MM/DD/YYYY');
+      let activeInterval = `<br>*Active Interval:* ${start} - ${end}`;
 
       return { iconURL: opportunity.iconURL,
-        description: name + slug + opportunityType + sponsor + tags + description};
+        description: name + slug + opportunityType + sponsor + tags + description + activeInterval};
     })
   },
 
