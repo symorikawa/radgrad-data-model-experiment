@@ -10,7 +10,7 @@ This application demonstrates:
 
 ## Screencast
 
-Click the image below to watch a 25 minute walkthrough of this system.
+Click the image below to watch a 24 minute walkthrough of this system. (I apologize for forgetting to reduce the size of my camera window in the video!) 
 
 [<img src="https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/data-model-example-youtube.png" width="600">](https://www.youtube.com/watch?v=-r41LRsuf-4)
 
