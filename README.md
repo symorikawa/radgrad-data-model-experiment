@@ -8,6 +8,13 @@ This application demonstrates:
 
 * How to manipulate RadGrad data by a client. This is demonstrated by displaying the data model through a series of tables. Note that the specific data published and displayed for each entity depends upon the role of the logged in user. Currently, the entire data model is published to users with the role 'admin' or 'faculty'.  For a student, only their own data is published to the client for the following entities: users, degree program, course instances, opportunity instances, and work instances.
 
+## Screencast
+
+Click the image below to watch a 25 minute walkthrough of this system.
+
+[<img src="https://raw.githubusercontent.com/radgrad/data-model-example/master/doc/images/data-model-example-youtube.png" width="600">](https://www.youtube.com/watch?v=-r41LRsuf-4)
+
+
 ## Invocation
 
 To run this application, first [install Meteor](https://www.meteor.com/install).
