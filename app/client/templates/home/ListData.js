@@ -4,7 +4,7 @@ Template.ListData.helpers({
    * @returns {[doc]} A (non-reactive) array of objects containing user info.
    */
   userList: function () {
-    return _.map(RadGrad.user.find().fetch(), function(user) {
+    return _.map(RadGrad.user.find({}, {sort: {lastName: 1}}).fetch(), function(user) {
       // Required fields
       let name = `**${user.firstName} ${user.middleName} ${user.lastName}** `;
       let roles = `(${user.roles}) `;
