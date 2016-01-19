@@ -1,0 +1,236 @@
+<template name="ListData">
+  {{#IfLoggedIn}}
+
+    <div class="well">
+      <h3>Users</h3>
+      <table class="table">
+        <tbody>
+        {{#each userList}}
+          <tr>
+            <td>{{#markdown}}{{{description}}}{{/markdown}}</td>
+            <td><img width=50px class="img-circle" src="{{ picture }}"></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div class="well">
+      <h3>Degree Plans</h3>
+      <table class="table">
+        <tbody>
+        {{#each degreePlanList}}
+          <tr>
+            <td>{{#markdown}}{{{description}}}{{/markdown}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Degree Goals</h3>
+      <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Slug</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        {{#each degreeGoalList}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{slugName}}</td>
+            <td>{{description}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Tag Types</h3>
+      <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Slug</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        {{#each tagTypeList}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{slug}}</td>
+            <td>{{description}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Tags</h3>
+      <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Slug</th>
+        <th>Tag Type</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        {{#each tagList}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{slug}}</td>
+            <td>{{tagType}}</td>
+            <td>{{description}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div class="well">
+      <h3>Opportunity Types</h3>
+      <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Slug</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        {{#each opportunityTypeList}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{slug}}</td>
+            <td>{{description}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div class="well">
+      <h3>Opportunities</h3>
+      <table class="table">
+        <tbody>
+        {{#each opportunityList}}
+          <tr>
+            <td>{{#markdown}}{{{description}}}{{/markdown}}</td>
+            <td><img width=50px class="img-circle" src="{{ iconURL }}"></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Opportunity Instances</h3>
+      <table class="table">
+        <thead>
+        <th>Semester</th>
+        <th>Opportunity</th>
+        <th>Verified</th>
+        <th>Hrs/Wk</th>
+        <th>Student</th>
+        </thead>
+        <tbody>
+        {{#each opportunityInstanceList}}
+          <tr>
+            <td>{{semester}}</td>
+            <td>{{opportunity}}</td>
+            <td>{{verified}}</td>
+            <td>{{hrswk}}</td>
+            <td>{{student}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Courses</h3>
+      <table class="table">
+        <tbody>
+        {{#each courseList}}
+          <tr>
+            <td>{{#markdown}}{{{description}}}{{/markdown}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Course Instances</h3>
+      <table class="table">
+        <thead>
+        <th>Semester</th>
+        <th>Course</th>
+        <th>Verified</th>
+        <th>Grade</th>
+        <th>Student</th>
+        <th>Note</th>
+        </thead>
+        <tbody>
+        {{#each courseInstanceList}}
+          <tr>
+            <td>{{semester}}</td>
+            <td>{{course}}</td>
+            <td>{{verified}}</td>
+            <td>{{grade}}</td>
+            <td>{{student}}</td>
+            <td>{{note}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Work Instances</h3>
+      <table class="table">
+        <thead>
+        <th>Semester</th>
+        <th>Hrs/Wk</th>
+        <th>Student</th>
+        </thead>
+        <tbody>
+        {{#each workInstanceList}}
+          <tr>
+            <td>{{semester}}</td>
+            <td>{{hrswk}}</td>
+            <td>{{student}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="well">
+      <h3>Slugs</h3>
+      <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Entity Name</th>
+        </thead>
+        <tbody>
+        {{#each slugList}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{entityName}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+
+  {{/IfLoggedIn}}
+</template>
